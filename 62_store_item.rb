@@ -1,5 +1,3 @@
-puts "Hello 123"
-
 # C. Use hashes with symbols to represent the following scenario:
 # C.1 - You are the owner of a store that sells items (you decide what specifically). Each item has various properties such as color, price, etc.
 # C.2 - Represent 3 items using hashes. Each hash should have the same keys with different values.
@@ -67,7 +65,7 @@ item3 = {
 # b) Create an instance from your store item class. Use puts statements to print the 3 attributes individually to the terminal.
 # c) Use the attr_writer method to change a value
 
-# class Item
+# class Store_item
 #   attr_reader :name, :color, :price, :quantity 
 #   attr_writer :name, :color, :price, :quantity 
 
@@ -84,7 +82,7 @@ item3 = {
 
 # end
 
-# item1 = Item.new("T-shirt", "red", 120,  20)
+# item1 = Store_item.new("T-shirt", "red", 120,  20)
 # p item1
 # item1.print_info
 
@@ -93,7 +91,7 @@ item3 = {
 # p item1.name
 
 # Rewrite your store items using a class with a single options hash in the initialize method.
-class Item
+class Store_item
   attr_reader :name, :color, :price, :quantity 
   attr_writer :name, :color, :price, :quantity 
 
@@ -110,7 +108,7 @@ class Item
 
 end
 
-item1 = Item.new({name: "T-shirt", color: "red", price: 120, quantity:20})
+item1 = Store_item.new({name: "T-shirt", color: "red", price: 120, quantity:20})
 p item1
 item1.print_info
 
