@@ -54,9 +54,8 @@
 #   end
 # end
 
+class wheeledvehicle
 
-
-class Car
   def initialize
     @speed = 0
     @direction = 'north'
@@ -79,11 +78,24 @@ class Car
   end
 end
 
-class Bike < Car
+
+class Car < wheeledvehicle
+
+class Bike < wheeledvehicle
   def ring_bell
     puts "Ring ring!"
   end
 end
+
+
+# car = Car.new
+# car.honk.horn
+# car.ring_bell
+
+# bike = Bike.new
+# bike.ring_bell
+# bike.honk.horn
+
 
 bike1 = Car.new
 bike1.honk_horn
