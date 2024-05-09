@@ -75,7 +75,7 @@ employee1.print_info
 employee2.print_info
 
 
-class Manager < Employee
+class Manager < Employee   # Inheritance: Manager class will inherit everything from the Employee class
   def initialize(input_options)
     super
     @employees = input_options[:employees]

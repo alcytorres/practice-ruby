@@ -8,6 +8,7 @@
 
 # Bonus: Read more about inheritance and object hierarchy in Ruby here: https://www.leighhalliday.com/object-hierarchy-in-ruby
 
+# Raw File
 # class Car
 #   def initialize
 #     @speed = 0
@@ -54,8 +55,20 @@
 #   end
 # end
 
-class wheeledvehicle
+# Testing raw code
+# car1 = Car.new
+# car1.honk_horn
+# car1.ring_bell
 
+# bike1 = Bike.new
+# bike1.ring_bell
+# bike1.honk_horn
+
+#–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+# Best practice for class naming: Capital, singular, UpperCamelCase/PascaleCase
+
+class WheeledVehicle
   def initialize
     @speed = 0
     @direction = 'north'
@@ -72,30 +85,27 @@ class wheeledvehicle
   def turn(new_direction)
     @direction = new_direction
   end
+end
 
+
+class Car < WheeledVehicle
   def honk_horn
     puts "Beeeeeeep!"
   end
 end
 
-
-class Car < wheeledvehicle
-
-class Bike < wheeledvehicle
+class Bike < WheeledVehicle
   def ring_bell
     puts "Ring ring!"
   end
 end
 
 
-# car = Car.new
-# car.honk.horn
-# car.ring_bell
+# Testing raw code
+# car1 = Car.new
+# car1.honk_horn
+# car1.ring_bell
 
-# bike = Bike.new
-# bike.ring_bell
-# bike.honk.horn
-
-
-bike1 = Car.new
+bike1 = Bike.new
+bike1.ring_bell
 bike1.honk_horn
